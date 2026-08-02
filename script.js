@@ -45,5 +45,32 @@ if (searchInput) {
                 card.style.display = 'none';
             }
         });
+
+        // Google Sheet API Link
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxEMdnY6o1ul8mrWPnbcqDmCDiLYRaB18hQpDtXwGiJkrP7uJLG28AhOyYX9qE4VmdEsw/exec"; 
+
+function checkPayment() {
+    const query = document.getElementById('searchInput').value.trim();
+    if(!query) {
+        alert("කරුණාකර Phone Number එකක් ඇතුළත් කරන්න!");
+        return;
+    }
+
+    fetch(SCRIPT_URL + "?phone=" + query)
+    .then(res => res.json())
+    .then(data => {
+        if(data.status === "success") {
+            document.getElementById('resName').innerText = data.name;
+            document.getElementById('resAcc').innerText = data.accId;
+            document.getElementById('resTotal').innerText = "LKR " + data.total;
+            document.getElementById('resPaid').innerText = "LKR " + data.paid;
+            document.getElementById('resDue').innerText = "LKR " + data.due;
+            document.getElementById('resultBox').style.display = "block";
+        } else {
+            alert("විස්තර හමු වූයේ නැත! කරුණාකර Phone Number එක පරීක්ෂා කරන්න.");
+        }
+    })
+    .catch(err => alert("Data load කිරීමේ දෝෂයක් සිදු විය!"));
+}
     });
 }
