@@ -63,6 +63,26 @@
         </div>
     </section>
 
+<!-- PAYMENT CHECKER SECTION -->
+<div style="background: #1e293b; padding: 25px; border-radius: 12px; margin: 30px auto; max-width: 500px; text-align: center; border: 1px solid #334155; color: #fff; font-family: sans-serif;">
+    <h2 style="color: #f59e0b; margin-bottom: 10px;">🔍 Check Payment Status</h2>
+    <p style="font-size: 14px; color: #94a3b8; margin-bottom: 15px;">බේ Phone Numඔber එක ඇතුළත් කර ගෙවීම් විස්තර බලන්න:</p>
+    
+    <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 15px;">
+        <input type="text" id="searchInput" placeholder="e.g. 0771234567" style="padding: 10px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: #fff; width: 60%;">
+        <button onclick="checkPayment()" style="padding: 10px 15px; background: #f59e0b; border: none; font-weight: bold; border-radius: 6px; cursor: pointer;">Search</button>
+    </div>
+
+    <div id="resultBox" style="display: none; background: #0f172a; padding: 15px; border-radius: 8px; text-align: left;">
+        <p style="margin: 5px 0;"><strong>Customer:</strong> <span id="resName">-</span></p>
+        <p style="margin: 5px 0;"><strong>Account ID:</strong> <span id="resAcc">-</span></p>
+        <p style="margin: 5px 0;"><strong>Total Price:</strong> <span id="resTotal">-</span></p>
+        <p style="margin: 5px 0;"><strong>Paid Amount:</strong> <span id="resPaid" style="color: #22c55e; font-weight: bold;">-</span></p>
+        <p style="margin: 5px 0;"><strong>Due Balance:</strong> <span id="resDue" style="color: #ef4444; font-weight: bold;">-</span></p>
+    </div>
+</div>
+
+    
     <!-- Free Fire Accounts Section -->
     <section id="ff-accounts" class="section">
         <div class="container">
