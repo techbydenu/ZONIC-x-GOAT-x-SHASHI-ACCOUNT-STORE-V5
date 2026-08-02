@@ -47,7 +47,7 @@ if (searchInput) {
         });
 
         // Google Sheet API Link
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxEMdnY6o1ul8mrWPnbcqDmCDiLYRaB18hQpDtXwGiJkrP7uJLG28AhOyYX9qE4VmdEsw/exec"; 
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwchSye8Vs9CiUUfb2jS-KDpmo-Z7y1OlGd6OMgs5J6DB12vlMdYG9cSl-qrJnUGLnN-g/exec"; 
 
 function checkPayment() {
     const query = document.getElementById('searchInput').value.trim();
